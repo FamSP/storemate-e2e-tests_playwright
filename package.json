@@ -1,0 +1,20 @@
+{
+  "name": "storemate-e2e",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests for StoreMate (customer features, US-01 to US-20)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:guest": "playwright test --project=guest",
+    "test:customer": "playwright test --project=customer",
+    "test:fresh": "playwright test --project=fresh",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "dotenv": "^16.4.5"
+  }
+}
