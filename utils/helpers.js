@@ -15,7 +15,7 @@ export async function expectToast(page, text) {
 
 /** ปุ่ม "ยืนยัน" / "ยกเลิก" ใน ConfirmToast */
 export async function confirmDialog(page, answer = 'ยืนยัน') {
-  await page.getByRole('button', { name: answer, exact: true }).first().click();
+  await page.getByRole('button', { name: answer, exact: true }).last().click();
 }
 
 export const toNumber = (text) => Number(String(text ?? '').replace(/[^\d.]/g, ''));
@@ -158,6 +158,8 @@ export async function buyNow(page, productId) {
   await page.locator(tid('btn-buy-cart')).click();
   await expect(page).toHaveURL(/\/payment$/);
   await expect(page.locator(tid('order-item')).first()).toBeVisible();
+  // ต้องรอที่อยู่เริ่มต้นโหลดเสร็จก่อน ไม่อย่างนั้นกดยืนยันแล้วจะขึ้น "กรุณาเลือกที่อยู่ในการรับสินค้า"
+  await expect(page.locator(tid('address'))).toBeVisible();
 }
 
 /** รอ response ของ API ที่ส่ง orderNo กลับมา (ใช้หาเลขที่คำสั่งซื้อที่เพิ่งสร้าง) */

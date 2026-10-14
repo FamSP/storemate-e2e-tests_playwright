@@ -1,14 +1,12 @@
 {
   "name": "storemate-e2e",
   "version": "1.0.0",
-  "description": "Playwright E2E tests for StoreMate (customer features, US-01 to US-20)",
+  "description": "Playwright E2E tests for StoreMate (US-03 product list, US-04 search, US-05 product detail)",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "playwright test",
     "test:guest": "playwright test --project=guest",
-    "test:customer": "playwright test --project=customer",
-    "test:fresh": "playwright test --project=fresh",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
     "report": "playwright show-report"

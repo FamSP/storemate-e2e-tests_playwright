@@ -21,12 +21,6 @@ export const PRODUCT_ID = env('PRODUCT_ID', '53');
 export const SECOND_PRODUCT_ID = env('SECOND_PRODUCT_ID', '64');
 export const UNAVAILABLE_PRODUCT_ID = env('UNAVAILABLE_PRODUCT_ID');
 
-export const CARD = {
-  number: env('TEST_CARD_NUMBER', '4242424242424242'),
-  expiry: env('TEST_CARD_EXPIRY', '12/30'),
-  cvc: env('TEST_CARD_CVC', '123'),
-  name: 'SOMCHAI JAIDEE',
-};
 
 export const VALID_PASSWORD = 'Test1234';
 
@@ -76,11 +70,6 @@ export const MSG = {
   lastAddress: 'ไม่สามารถลบได้ เนื่องจากต้องมีที่อยู่เริ่มต้นอย่างน้อย 1 รายการ',
   confirmDeleteAddress: 'คุณต้องการลบที่อยู่นี้ใช่หรือไม่?',
   orderSuccess: 'คำสั่งซื้อสำเร็จ',
-  selectPayment: 'กรุณาเลือกช่องทางการชำระเงิน',
-  cardNameLetters: 'กรุณากรอกชื่อผู้ถือบัตรเป็นตัวอักษรเท่านั้น',
-  cardIncomplete: 'กรุณากรอกหมายเลขบัตรให้ครบ',
-  cardExpiry: 'วันหมดอายุไม่ถูกต้อง กรุณาตรวจสอบข้อมูลอีกครั้ง',
-  qrExpired: 'QR Code หมดอายุการใช้งาน',
   noOrders: 'ยังไม่มีรายการคำสั่งซื้อ',
   noNotification: 'ไม่มีการแจ้งเตือนในหมวดหมู่นี้',
   cancelSuccess: 'ส่งคำขอยกเลิกสำเร็จ',
